@@ -1,10 +1,11 @@
 import { FC } from 'react';
-import "./_style.scss"
+import './_style.scss';
+import { Outlet } from 'react-router';
 
 export const AuthLayout: FC = () => {
-    return (
-        <>
-           <h1>react</h1> 
-        </>
-    );
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };

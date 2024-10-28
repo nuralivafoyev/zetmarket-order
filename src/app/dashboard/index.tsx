@@ -1,10 +1,18 @@
 import { FC } from 'react';
-import "./_style.scss"
+import { Outlet } from 'react-router';
+import { Aside, Header } from '@/components';
+import './_style.scss';
 
 export const Dashboard: FC = () => {
-    return (
-        <>
-           <h1>Dashboard</h1> 
-        </>
-    );
+  return (
+    <>
+      <main>
+        <Aside />
+        <section className="wrapper">
+          <Header />
+          <Outlet />
+        </section>
+      </main>
+    </>
+  );
 };

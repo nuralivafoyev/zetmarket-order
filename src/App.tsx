@@ -1,9 +1,9 @@
-import React from 'react';
+import { Aside } from './components/index';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
-      <h1>React</h1>
+      <Aside />
     </>
   );
 };
