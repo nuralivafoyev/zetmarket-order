@@ -23,6 +23,12 @@ ul {
 
 main {
   display: flex;
+  gap: 20px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -3,11 +3,13 @@ header {
   background-color: #fff;
   position: sticky;
   top: 0;
+  left: 0;
   border-radius: 25px;
   display: flex;
   align-items: center;
   padding: 25px 40px;
-  justify-content: space-between;
+  justify-content: flex-start;
+  
   .search {
     border-radius: 40px;
     border: none;
@@ -16,8 +18,15 @@ header {
     font-size: 20px;
     width: 30%;
     background-color: #f0f3f4;
-    // margin-left: 50px;
     color: #081225;
+    font-weight: 500;
+  }
+  label {
+    transform: translateX(-40px) translateY(3px);
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -27,9 +36,9 @@ header {
     color: #f0f3f4;
     .search {
       background-color: #f0f3f485;
-      color: #081225;
+      color: #ffffffd6;
       &::placeholder {
-        color: #081225;
+        color: #ffffffd6;
       }
     }
   }

@@ -1,27 +1,11 @@
 import { FC } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { navigation } from '@constants';
-import type { TnavigationType } from '@/types';
+import type { InavigationType } from '@/types';
 import { checkRole } from '@/utils';
 import './_style.scss';
 
 let role = localStorage.getItem('role') || 'admin';
-
-
-
-// function myFunction() {
-//   const isConfirmed = confirm('Are you sure you want to log out?');
-
-//    if (isConfirmed) {
-//     // Redirect to the login page if confirmed
-//     window.open('http://localhost:5174/login');
-//   } else {
-//     // Redirect to the homepage if canceled
-//     return;
-//   }
-// }
-
-
 
 const index: FC = () => {
   return (
@@ -32,12 +16,12 @@ const index: FC = () => {
         <p>ETMARKET-B2B</p>
       </Link>
       <ul className="list">
-        {checkRole(navigation, role).map((item: TnavigationType) => (
-          <li className="list-item">
+        {checkRole(navigation, role).map((item: InavigationType) => (
+          <li key={item.path} className="list-item">
             <NavLink to={item.path} className="list-link">
               <i className={item.icon}></i>
               <span>{item.title}</span>
-            </NavLink>{' '}
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -47,7 +31,7 @@ const index: FC = () => {
           alt="user"
         />
         <h4>Alisher Navoiy</h4>
-        <Link to={'/login'}>
+        <Link to={"/login"} >
           <button>Log Out</button>
         </Link>
       </div>

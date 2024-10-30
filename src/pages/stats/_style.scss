@@ -1,0 +1,12 @@
+.stats {
+    width: 100%;
+    .card-grid {
+        // display: grid;
+        // max-width: 100%;
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-template-rows: 1fr;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}

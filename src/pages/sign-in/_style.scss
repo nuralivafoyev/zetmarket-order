@@ -4,6 +4,10 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
   .wrapper {
     background-color: #ffffff8d;
     backdrop-filter: blur(10px);
@@ -89,9 +93,87 @@
       }
     }
   }
+
+  .animater {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+    div {
+      width: 80px;
+      height: 80px;
+      border: 4px solid #081225;
+      // border-radius: 50%;
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 12%;
+        left: 41%;
+        animation: animate 6s linear infinite;
+        border-radius: 50%;
+      }
+      &:nth-child(2) {
+        top: 32%;
+        left: 11%;
+        animation: animate 5s linear infinite;
+      }
+      &:nth-child(3) {
+        top: 52%;
+        left: 21%;
+        animation: animate 4s linear infinite;
+      }
+      &:nth-child(4) {
+        top: 22%;
+        left: 57%;
+        animation: animate 12s linear infinite;
+        border-radius: 50%;
+      }
+      &:nth-child(5) {
+        top: 68%;
+        left: 47%;
+        animation: animate 9s linear infinite;
+        border-radius: 50%;
+      }
+      &:nth-child(6) {
+        top: 32%;
+        left: 47%;
+        animation: animate 7s linear infinite;
+      }
+      &:nth-child(7) {
+        top: 48%;
+        left: 91%;
+        animation: animate 6s linear infinite;
+      }
+      &:nth-child(8) {
+        top: 60%;
+        left: 47%;
+        animation: animate 12s linear infinite;
+        border-radius: 50%;
+      }
+      &:nth-child(9) {
+        top: 31%;
+        left: 67%;
+        animation: animate 3s linear infinite;
+      }
+      &:nth-child(10) {
+        top: 55%;
+        left: 37%;
+        animation: animate 15s linear infinite;
+      }
+    }
+  }
 }
 
+//----------------- dark mode ---------------
 @media (prefers-color-scheme: dark) {
+  .animater {
+    div {
+      border-color: #ffffffc6 !important;
+    }
+  }
   form {
     input {
       border-color: #ffffff34 !important;
@@ -102,5 +184,17 @@
         border-color: #cceabb !important;
       }
     }
+  }
+}
+
+// ------------------ animation ------------
+
+@keyframes animate {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) rotate(360deg);
   }
 }
