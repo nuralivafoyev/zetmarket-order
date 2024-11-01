@@ -8,15 +8,12 @@ const index: FC = () => {
     <section className="stats">
       <div className="container">
         <div className="card-grid">
-          {
-            cardStats.map((card) => (
-              <StatCard key={card.title} {...card} />
-            ))
-          }
+          {cardStats.map((card) => (
+            <StatCard key={card.title} {...card} />
+          ))}
         </div>
       </div>
     </section>
-
   );
 };
 

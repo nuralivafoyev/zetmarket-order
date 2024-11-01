@@ -1,12 +1,21 @@
 .stats {
-    width: 100%;
+  // width: 100%;
+  .card-grid {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .stats {
+    padding-bottom: 80px;
     .card-grid {
-        // display: grid;
-        // max-width: 100%;
-        // grid-template-columns: repeat(5, 1fr);
-        // grid-template-rows: 1fr;
-        display: flex;
-        align-items: center;
-        gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+      width: 100%;
     }
+  }
 }

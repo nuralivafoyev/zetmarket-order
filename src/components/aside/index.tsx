@@ -21,17 +21,18 @@ const index: FC = () => {
             <NavLink to={item.path} className="list-link">
               <i className={item.icon}></i>
               <span>{item.title}</span>
+              <small className={item.visible}>{item.count}</small>
             </NavLink>
           </li>
         ))}
       </ul>
-      <div className="logout" role="dialog">
+      <div className="logout">
         <img
           src="https://buxdu.uz/media/article/images/navoi-0-0-0-0-1587023954.jpg"
           alt="user"
         />
         <h4>Alisher Navoiy</h4>
-        <Link to={"/login"} >
+        <Link to={'/login'}>
           <button>Log Out</button>
         </Link>
       </div>
