@@ -15,6 +15,7 @@ const index: FC = () => {
         <span>Z</span>
         <p>ETMARKET-B2B</p>
       </Link>
+
       <ul className="list">
         {checkRole(navigation, role).map((item: InavigationType) => (
           <li key={item.path} className="list-item">
@@ -26,12 +27,13 @@ const index: FC = () => {
           </li>
         ))}
       </ul>
+
       <div className="logout">
         <img
-          src="https://buxdu.uz/media/article/images/navoi-0-0-0-0-1587023954.jpg"
+          src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQLL0VKBxr9IkeP6S-B3zv07-_7-5haUPAUUkc4LB7B2jKO2Phuca09TPJhaJN5iZy8PGoGcXRQPaUPvAg"
           alt="user"
         />
-        <h4>Alisher Navoiy</h4>
+        <h4>Donald Tramp</h4>
         <Link to={'/login'}>
           <button>Log Out</button>
         </Link>

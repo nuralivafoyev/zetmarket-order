@@ -1,4 +1,4 @@
-import { Aside } from './components/index';
+import { Aside } from './components';
 
 const App = () => {
   return (

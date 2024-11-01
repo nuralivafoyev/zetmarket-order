@@ -79,7 +79,8 @@ header {
       &::placeholder {
         color: #9b9797b3;
       }
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         box-shadow: -2px 0px 15px #ffffff82;
       }
     }

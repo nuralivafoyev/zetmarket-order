@@ -52,7 +52,7 @@ const router = [
       },
       {
         path: '*',
-        element: <div>Not Found 404 </div>,
+        element: <div>Not Found 404!</div>,
       },
     ],
   },
