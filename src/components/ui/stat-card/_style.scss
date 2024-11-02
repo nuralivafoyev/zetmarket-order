@@ -16,7 +16,7 @@
   object-fit: fill;
   &::after {
     content: '';
-    transition: all 0.7s ease-in;
+    transition: all 0.7s ease;
     position: absolute;
     width: 354px;
     height: 10px;
@@ -53,6 +53,8 @@
   }
 }
 
+
+// ------------------ dark mode -------------------
 @media (prefers-color-scheme: dark) {
   .stat_card {
     box-shadow: 0px 2px 20px #000000da;
@@ -63,6 +65,7 @@
   }
 }
 
+// ----------------- responsive -------------------
 @media only screen and (max-width: 768px) {
   .stat_card {
     width: 90%;
