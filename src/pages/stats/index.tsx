@@ -10,11 +10,10 @@ const index: FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Ma'lumotlarni yuklash simulyatsiyasi
     const fetchData = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 1500); // 2 soniya kutish
+      }, 1000); 
     };
 
     fetchData();

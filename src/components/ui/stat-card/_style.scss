@@ -1,19 +1,19 @@
 .stat_card {
-  width: 260px;
   height: 160px;
   border-radius: 15px;
-  box-shadow: 0px 2px 20px #f5f5f520;
+  box-shadow: 0px 2px 20px #0000001d;
   padding: 10px 16px;
   margin: 10px 0px;
   gap: 5px;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   transition: all 0.2s ease-out;
-  max-width: 100%;
+  max-width: 95%;
   overflow: hidden;
   position: relative;
-  object-fit: fill;
+  cursor: pointer;
+  border: 2px solid #0000000d;
+
   &::after {
     content: '';
     transition: all 0.7s ease;
