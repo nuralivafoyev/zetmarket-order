@@ -62,7 +62,9 @@ const index: FC = () => {
             />
 
             <button>Sign In</button>
-            <Link to={'/'} className='register-link'>Don't have an account?</Link>
+            <Link to={'/'} className="register-link">
+              Don't have an account?
+            </Link>
           </form>
         </div>
       </section>

@@ -6,4 +6,12 @@ import SignIn from './sign-in';
 import Skeleton from './skeleton';
 import Stats from './stats';
 
-export { OrderNew, OrderCompleted, OrderCanceled, Leads, SignIn, Stats, Skeleton };
+export {
+  OrderNew,
+  OrderCompleted,
+  OrderCanceled,
+  Leads,
+  SignIn,
+  Stats,
+  Skeleton,
+};

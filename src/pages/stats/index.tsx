@@ -1,19 +1,18 @@
 import { FC } from 'react';
 import { useEffect, useState } from 'react';
-import { StatCard } from '@/components';
+import { StatCard, StatChart } from '@/components';
 import { cardStats } from '@constants';
 import { Skeleton } from '..';
 import './_style.scss';
 
 const index: FC = () => {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 1000); 
+      }, 1000);
     };
 
     fetchData();
@@ -31,9 +30,9 @@ const index: FC = () => {
               ))}
             </div>
           </div>
+          <StatChart />
         </section>
-      )
-      }
+      )}
     </>
   );
 };

@@ -13,8 +13,7 @@ const index: FC = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  
-  
+
   return (
     <aside className={`aside ${isOpen ? 'asside-close' : ''}`}>
       <Link to="/" className="logo">
@@ -22,8 +21,13 @@ const index: FC = () => {
         <span>Z</span>
         <p>ETMARKET-B2B</p>
       </Link>
-      <button onClick={toggleMenu} className={`toggle-button ${isOpen ? 'open' : ''}`}>
-        <i className={isOpen ? 'bi bi-arrow-bar-left' : 'bi bi-arrow-bar-left'}></i>
+      <button
+        onClick={toggleMenu}
+        className={`toggle-button ${isOpen ? 'open' : ''}`}
+      >
+        <i
+          className={isOpen ? 'bi bi-arrow-bar-left' : 'bi bi-arrow-bar-left'}
+        ></i>
       </button>
 
       <ul className={`list ${isOpen ? 'list-close' : ''}`}>

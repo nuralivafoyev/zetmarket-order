@@ -1,0 +1,25 @@
+.chart-wrapper {
+  width: 100% !important;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  h1 {
+    font-weight: 600px;
+    font-size: 20px;
+    text-align: start;
+    transition: all 0.3s ease !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .chart-wrapper {
+    background-color: #1c1c1c !important;
+    border: 1px solid #2c2c2c !important;
+    h1 {
+      color: #fff !important;
+    }
+  }
+}
