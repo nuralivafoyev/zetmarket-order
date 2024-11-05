@@ -150,3 +150,34 @@ export const dataChart = [
     amt: 2100,
   },
 ];
+
+export const options = [
+  {
+    value: 'sun | yak',
+    label: 'Yakshanba',
+  },
+  {
+    value: 'mon',
+    label: 'Dushanba',
+  },
+  {
+    value: 'tue',
+    label: 'Seshanba',
+  },
+  {
+    value: 'wed',
+    label: 'Chorshanba',
+  },
+  {
+    value: 'thu',
+    label: 'Payshanba',
+  },
+  {
+    value: 'fri',
+    label: 'Juma',
+  },
+  {
+    value: 'sat',
+    label: 'Shanba',
+  },
+];
