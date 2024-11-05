@@ -29,8 +29,8 @@ const index: FC = () => {
                 <StatCard key={card.title} {...card} />
               ))}
             </div>
+            <StatChart />
           </div>
-          <StatChart />
         </section>
       )}
     </>

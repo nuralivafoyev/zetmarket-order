@@ -1,25 +1,61 @@
-.chart-wrapper {
-  width: 100% !important;
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 15px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  h1 {
-    font-weight: 600px;
-    font-size: 20px;
-    text-align: start;
-    transition: all 0.3s ease !important;
+.chart-container {
+  .chart-wrapper {
+    width: 100% !important;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    h1 {
+      font-weight: 600px;
+      font-size: 20px;
+      text-align: start;
+      transition: all 0.3s ease !important;
+    }
+    .barchart {
+      width: 100%; /* Kenglikni 100% qilib belgilaymiz */
+      max-width: 1000px; /* Agar kerak bo'lsa maksimal kenglikni belgilash */
+    }
+
+    @media (max-width: 768px) {
+      .barchart {
+        height: 250px; /* 768px va undan kichik ekranlar uchun diagrammaning balandligini o'zgartirish */
+      }
+
+      .recharts-text {
+        font-size: 10px; /* Textlar o'lchamini kichraytirish */
+      }
+    }
   }
 }
 
+// -------------- Dark mode -----------------
 @media (prefers-color-scheme: dark) {
-  .chart-wrapper {
-    background-color: #1c1c1c !important;
-    border: 1px solid #2c2c2c !important;
-    h1 {
-      color: #fff !important;
+  .chart-container {
+    .chart-wrapper {
+      background-color: #081225;
+      border: 1px solid #2c2c2c;
+      h1 {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+// --------------- responsive ---------------
+@media only screen and (max-width: 768px) {
+  .chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 1000px !important;
+    margin: 0 auto;
+    background-color: red;
+    .chart-wrapper {
+      transform: translateX(-300px) translateY(360px) rotate(90deg);
+      width: 1000px !important;
     }
   }
 }
