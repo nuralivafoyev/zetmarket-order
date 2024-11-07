@@ -1,19 +1,25 @@
 .chart-container {
-  .chart-wrapper {
-    width: 100% !important;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: relative;
+  width: 100% !important;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px 20px;
+  .chart-txt {
     h1 {
       font-weight: 600px;
       font-size: 20px;
       text-align: start;
       transition: all 0.3s ease !important;
     }
+    h4 {
+      display: none;
+    }
+  }
+
+  .chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
     .barchart {
       width: 100%; /* Kenglikni 100% qilib belgilaymiz */
       max-width: 1000px; /* Agar kerak bo'lsa maksimal kenglikni belgilash */
@@ -34,12 +40,13 @@
 // -------------- Dark mode -----------------
 @media (prefers-color-scheme: dark) {
   .chart-container {
+    background-color: #081225;
+    .chart-txt {
+      background-color: #081225 !important;
+    }
     .chart-wrapper {
       background-color: #081225;
       border: 1px solid #2c2c2c;
-      h1 {
-        color: #fff !important;
-      }
     }
   }
 }
@@ -47,15 +54,28 @@
 // --------------- responsive ---------------
 @media only screen and (max-width: 768px) {
   .chart-container {
+    width: 100% !important;
+    // margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    // width: 1000px !important;
-    margin: 0 auto;
-    background-color: red;
+    background-color: transparent;
+    // overflow-x: hidden;
+    .chart-txt {
+      width: 100% !important;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 15px 20px;
+
+      h1 {
+        display: none;
+      }
+      h4 {
+        display: block;
+      }
+    }
     .chart-wrapper {
-      transform: translateX(-300px) translateY(360px) rotate(90deg);
-      width: 1000px !important;
+      display: none;
     }
   }
 }
