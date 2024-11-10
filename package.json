@@ -24,6 +24,7 @@
     "react-router": "^6.27.0",
     "react-router-dom": "^6.27.0",
     "react-select": "^5.8.2",
+    "react-type-animation": "^3.2.0",
     "recharts": "^2.13.3",
     "rsuite": "^5.74.1"
   },

@@ -181,3 +181,137 @@ export const options = [
     label: 'Shanba',
   },
 ];
+
+export interface DataItem {
+  id: number | string;
+  name: string;
+  age: number;
+  phone: string;
+  country: string;
+  product: string;
+  quantity: number;
+  ttprice: number;
+  payment: string;
+  status: string;
+  statusBg: string;
+}
+
+export const sampleData: DataItem[] = [
+  {
+    id: 1,
+    name: 'Donald Trump',
+    phone: '+7 999 123 45 67',
+    age: 78,
+    country: 'USA',
+    product: 'iPhone 14 Pro Max',
+    quantity: 5,
+    ttprice: 12000000,
+    payment: 'Credit Card',
+    status: 'Completed',
+    statusBg: 'green',
+  },
+  {
+    id: 2,
+    name: 'Vladimir Putin',
+    phone: '+7 888 987 65 43',
+    age: 72,
+    country: 'Russia',
+    product: 'iPhone 13 Pro',
+    quantity: 3,
+    ttprice: 9000000,
+    payment: 'Credit Card',
+    status: 'Canceled',
+    statusBg: 'red',
+  },
+  {
+    id: 3,
+    name: 'Xusniddin Atoullayev',
+    phone: '+998 90 675 69 39',
+    age: 23,
+    country: 'Andijon',
+    product: 'iPhone 12 Pro Max',
+    quantity: 1,
+    ttprice: 8000000,
+    payment: 'PayPal',
+    status: 'Completed',
+    statusBg: 'green',
+  },
+  {
+    id: 4,
+    name: 'Anora Toshova',
+    phone: '+998 90 213 45 67',
+    age: 16,
+    country: 'Samarqand',
+    product: 'iPhone 11 Pro Max',
+    quantity: 2,
+    ttprice: 7000000,
+    payment: 'PayPal',
+    status: 'Canceled',
+    statusBg: 'red',
+  },
+  {
+    id: 5,
+    name: 'Begzodjon Nematov',
+    phone: '+998 90 567 89 01',
+    age: 27,
+    country: 'Xorazim',
+    product: 'iPhone 12 Pro',
+    quantity: 3,
+    ttprice: 7000000,
+    payment: 'Credit Card',
+    status: 'Completed',
+    statusBg: 'green',
+  },
+  {
+    id: 6,
+    name: 'Rashid Toshov',
+    phone: '+998 90 321 65 43',
+    age: 29,
+    country: "Qoraqalpog'iston",
+    product: 'iPhone 11 Pro',
+    quantity: 2,
+    ttprice: 6000000,
+    payment: 'Credit Card',
+    status: 'Waiting',
+    statusBg: 'silver',
+  },
+  {
+    id: 7,
+    name: 'Timur Khatamov',
+    phone: '+998 90 456 78 90',
+    age: 32,
+    country: "Qoraqalpog'iston",
+    product: 'iPhone 12',
+    quantity: 1,
+    ttprice: 6000000,
+    payment: 'Credit Card',
+    status: 'Completed',
+    statusBg: 'green',
+  },
+  {
+    id: 8,
+    name: 'Mukhriddin khodiyev',
+    phone: '+998 90 123 45 67',
+    age: 25,
+    country: 'Tashkent',
+    product: 'iPhone 16 Pro Max',
+    quantity: 4,
+    ttprice: 10000000,
+    payment: 'Credit Card',
+    status: 'Waiting',
+    statusBg: 'silver',
+  },
+  {
+    id: 9,
+    name: 'Nurali Vafoyev',
+    phone: '+998 90 804 57 75',
+    age: 19,
+    country: 'Navoi',
+    product: 'iPhone 20 Pro Max',
+    quantity: 3,
+    ttprice: 8000000,
+    payment: 'Credit Card',
+    status: 'Completed',
+    statusBg: 'green',
+  },
+];

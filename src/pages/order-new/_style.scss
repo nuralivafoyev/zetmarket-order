@@ -9,4 +9,115 @@
     justify-content: space-between;
     align-items: center;
   }
+  .App {
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 7px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      td:last-child {
+        h1 {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 12px;
+        }
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #e9e9e9;
+      }
+    }
+  }
+}
+
+.silver {
+  background-color: #ffc107;
+}
+
+.green {
+  background-color: #198754;
+}
+
+.red {
+  background-color: #dc3545;
+}
+
+@keyframes modalInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px #0000003c;
+  z-index: 1000;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.9;
+  animation: modalInOut 3s ease forwards;
+}
+
+// ------------- dark mode --------------
+@media (prefers-color-scheme: dark) {
+  .new-orders {
+    background-color: #081225;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    .App {
+      table {
+        background-color: transparent;
+        color: #fff;
+        th,
+        td {
+          background-color: transparent;
+          color: #ffffff;
+        }
+        tr:nth-child(even) {
+          background-color: #9e9e9e19;
+        }
+        tr:hover {
+          background-color: #7372798a;
+        }
+      }
+    }
+  }
 }

@@ -4,4 +4,22 @@ main {
   .wrapper {
     width: 100%;
   }
+  .support-btn {
+    background-color: #f5f5f5;
+    position: absolute;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    bottom: 10px;
+    border-radius: 15px 0 0 15px;
+    right: 0px;
+    padding-right: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

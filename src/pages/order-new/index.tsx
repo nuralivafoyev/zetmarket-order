@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Kalendar } from '@/components';
+import Table from './table';
 import './_style.scss';
 
 const index: FC = () => {
@@ -10,6 +11,7 @@ const index: FC = () => {
           <h1>new orders are here</h1>
           <Kalendar />
         </div>
+        <Table />
       </div>
     </section>
   );
