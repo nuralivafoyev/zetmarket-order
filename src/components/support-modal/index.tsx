@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import './_style.scss';
 
@@ -19,19 +19,42 @@ const index: FC<ISupportModalProps> = ({ isOpen, onClose }) => {
   const userMail = 'email kerak';
   const userPassword = 'parol kerak';
 
+  useEffect(() => {
+    if (isOpen) {
+      const storedMessages = localStorage.getItem('supportMessages');
+      if (storedMessages) {
+        setMessages(JSON.parse(storedMessages));
+      }
+    }
+  }, [isOpen]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (message.trim() === '') return;
+
     const newMessage: Message = { sender: 'user', text: message };
-    setMessages((prevMessages) => [...prevMessages, newMessage]);
+    const updatedMessages = [...messages, newMessage];
+    setMessages(updatedMessages);
+
+    localStorage.setItem('supportMessages', JSON.stringify(updatedMessages));
+
     if (message.toLowerCase() === userMail.toLowerCase()) {
       setTimeout(() => {
         const adminResponse: Message = {
           sender: 'admin',
           text: 'Albatta! test@example.com',
         };
-        setMessages((prevMessages) => [...prevMessages, adminResponse]);
+        const updatedMessagesWithAdminResponse = [
+          ...updatedMessages,
+          adminResponse,
+        ];
+        setMessages(updatedMessagesWithAdminResponse);
+
+        localStorage.setItem(
+          'supportMessages',
+          JSON.stringify(updatedMessagesWithAdminResponse)
+        );
       }, 1000);
     } else if (
       message.toLowerCase() === userPassword.toLowerCase() &&
@@ -42,7 +65,16 @@ const index: FC<ISupportModalProps> = ({ isOpen, onClose }) => {
           sender: 'admin',
           text: 'Marxamat: password123.',
         };
-        setMessages((prevMessages) => [...prevMessages, adminResponse]);
+        const updatedMessagesWithAdminResponse = [
+          ...updatedMessages,
+          adminResponse,
+        ];
+        setMessages(updatedMessagesWithAdminResponse);
+
+        localStorage.setItem(
+          'supportMessages',
+          JSON.stringify(updatedMessagesWithAdminResponse)
+        );
       }, 1000);
     } else {
       setTimeout(() => {
@@ -50,7 +82,16 @@ const index: FC<ISupportModalProps> = ({ isOpen, onClose }) => {
           sender: 'admin',
           text: 'Xabaringiz yuborildi.',
         };
-        setMessages((prevMessages) => [...prevMessages, adminResponse]);
+        const updatedMessagesWithAdminResponse = [
+          ...updatedMessages,
+          adminResponse,
+        ];
+        setMessages(updatedMessagesWithAdminResponse);
+
+        localStorage.setItem(
+          'supportMessages',
+          JSON.stringify(updatedMessagesWithAdminResponse)
+        );
       }, 1000);
     }
 

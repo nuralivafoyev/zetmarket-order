@@ -216,12 +216,9 @@ aside {
   align-items: center;
   position: absolute;
   background-color: #f0f3f4;
-  border-radius: 0px 10px 10px 0px;
-  border: none;
-  padding: 28px 14px;
-  border-right: 4px solid #d6dde1;
-  border-top: 4px solid #d6dde1;
-  border-bottom: 4px solid #d6dde1;
+  border-radius: 50%;
+  padding: 20px 10px;
+  border: 4px solid #d6dde1;
   font-size: 20px;
   right: -22px;
   top: 20px;
@@ -233,15 +230,10 @@ aside {
     color: #081225;
   }
 }
-.toggle-button.active {
-  height: 0px;
-}
 .open {
   i {
     transform: rotate(180deg);
   }
-  width: 0px;
-  // padding: 28px 14px;
 }
 .asside-close {
   width: calc(440px - 320px);
