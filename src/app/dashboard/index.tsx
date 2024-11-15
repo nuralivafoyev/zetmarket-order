@@ -29,7 +29,7 @@ export const Dashboard: FC = () => {
 
         <ModalSupport isOpen={isModalOpen} onClose={closeModal} />
         <button className="support-btn" onClick={openModal}>
-          Support
+          <i className="bi bi-wechat"></i>Support
         </button>
       </main>
     </>
